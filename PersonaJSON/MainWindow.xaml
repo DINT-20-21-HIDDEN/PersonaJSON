@@ -1,0 +1,21 @@
+﻿<Window x:Class="PersonaJSON.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonaJSON"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Margin="10">
+        <ListBox x:Name="personasListBox"
+                 ItemsSource="{Binding}"
+                 DisplayMemberPath="Nombre"
+                 ></ListBox>
+        <Button x:Name="exportarButton"
+                Click="exportarButton_Click"
+                Margin="0,10,0,5">Exportar a JSON</Button>
+        <Button x:Name="importarButton"
+                Click="importarButton_Click">Importar de JSON</Button>
+    </StackPanel>
+    
+</Window>
