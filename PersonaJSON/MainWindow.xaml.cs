@@ -1,6 +1,11 @@
 ﻿using System.Windows;
 using System.Collections.ObjectModel;
+
+//Para poder usar esta librería de manipulación de ficheros JSON hay que instalar un paquete NuGet
+//Ir a la opción de menú Proyecto>Administrar paquetes NuGet...
+//En Examinar buscar el paquete Newtonsoft.Json e instalar su última versión
 using Newtonsoft.Json;
+
 using System.IO;
 using System.Collections.Generic;
 
@@ -31,7 +36,7 @@ namespace PersonaJSON
         }
 
         private void importarButton_Click(object sender, RoutedEventArgs e)
-        {                     
+        {
             using (StreamReader jsonStream = File.OpenText("personas.json"))
             {
                 var json = jsonStream.ReadToEnd();
@@ -39,7 +44,7 @@ namespace PersonaJSON
 
                 foreach (Persona p in personas)
                 {
-                    lista.Add(p); 
+                    lista.Add(p);
                 }
             }
         }
